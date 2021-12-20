@@ -1,18 +1,38 @@
 ﻿// 25. Найти сумму чисел от 1 до А
 
-void sumNambers(int a)
+void ShowNumbers(int a)
 {
-    int maxN = a;
-    int minN = 1;
-    //Console.WriteLine($"а | а х а"); 
-    while(minN <= maxN)
+    int maxA = a;
+    int minA = 1;
+    Console.Write("Интервал от введенного числа: ");
+    while (minA <= maxA)
     {
-        int sum = minN + minN;
-        Console.WriteLine(sum);  
-        minN++;
+        Console.Write(minA +" ");  
+        minA++;
     }  
 }
 
-Console.Write("Введите число: ");
+int sumNumbers(int a)
+{
+    int maxA = a;
+    int minA = 1;
+    int sumNumbers = 0;
+    while (minA <= maxA)
+    {
+        int count = minA;
+        if (minA <= maxA)
+        {  
+            sumNumbers = sumNumbers + minA;
+            count++;
+        }
+        minA++;
+    }
+    return sumNumbers;
+}
+
+Console.Write("Введите число A: ");
 int a = Convert.ToInt32(Console.ReadLine());
-sumNambers(a);
+ShowNumbers(a);
+Console.WriteLine();
+int sum = sumNumbers(a);
+Console.WriteLine($"Сумма чисел от 0 до А = {sum}.");

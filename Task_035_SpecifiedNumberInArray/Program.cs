@@ -24,8 +24,14 @@ string specifiedNumber(int[] givenArray, int givenNumber)
         for (int i = 0; i < givenArray.Length; i++)
         {
             if (givenArray[i] == givenNumber) 
-            result = $"Заданное число присутствует в массиве.";
-            else result = $"Заданное число отсутствует в массиве.";
+            {
+                result = $"Заданное число присутствует в массиве.";
+                break;
+            }
+            else 
+            {
+                result = $"Заданное число отсутствует в массиве.";
+            }
         }
         return result;
     }

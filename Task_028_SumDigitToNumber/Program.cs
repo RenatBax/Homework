@@ -3,6 +3,9 @@
 int sumDigits(string number)
 {
     //int length = number.Length;
+    
+    int N = Convert.ToInt32(number);
+    
     int result = 0;
     for (int i = 0; i < number.Length; i++)
     {
@@ -16,5 +19,6 @@ int sumDigits(string number)
 
 Console.Write("Введите число: ");
 string N = Console.ReadLine();
+
 int sum = sumDigits(N);
 Console.WriteLine($"Сумма цифр в введенном числе = {sum}.");

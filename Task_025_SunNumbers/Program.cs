@@ -37,12 +37,13 @@ Console.WriteLine();
 int sum = sumNumbers(a);
 Console.WriteLine($"Сумма чисел от 0 до А = {sum}.");
 
+// Демонстрация out
 void Calculate(int a, int b, out int sum, out int multi)
 {
     sum = a + b;
     multi = a * b;
-    return 0;
+    //return 0;
 }
 int s, m;
 Calculate(3, 3, out s, out m);
-Console.WriteLine($"Сумма = {s} , произведение = {m}");
+Console.WriteLine($"Сумма = {s}, произведение = {m}");

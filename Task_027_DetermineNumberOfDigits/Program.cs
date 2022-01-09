@@ -12,8 +12,8 @@ string N = Console.ReadLine();
 double digits = determineNumberOfDigits(N);
 Console.WriteLine($"Количество цифр в введенном числе: {digits}.");
 
-// Второй способ, но неработает если знаков больше 9????
-int calculateDigits(int number)
+// Второй способ
+int calculateDigits(long number)
 {
     int calculate = 0;
     while (number != 0)
@@ -23,5 +23,5 @@ int calculateDigits(int number)
     }
     return calculate;
 }
-int digit = Convert.ToInt32(N);
+long digit = Convert.ToInt64(N);
 Console.WriteLine("Второй способ: " +calculateDigits(digit));
